@@ -44,12 +44,22 @@ const generateEurojackpotNumbers = () => {
 
 <style scoped>
 .number-list {
-  display: inline;
-  padding: 0;
+    display: inline;
+    padding: 0;
   list-style-type: none;
 }
 
 .number-list li {
-  display: inline;
+    display: inline;
+    font-weight: 600;
+}
+button {
+  margin-bottom: 15px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  border: 1px solid aquamarine;
+  box-shadow: 4px 4px rgba(22, 91, 35, 0.558);
+  width:200px;
+  height: 45px;
 }
 </style>

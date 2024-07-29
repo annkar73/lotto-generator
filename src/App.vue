@@ -16,12 +16,15 @@ const updateGenerator = (newGenerator: 'lotto' | 'eurojackpot' | 'keno') => {
 <template>
 <div id="app">
     <h1>Lottery Numbers Generators</h1>
-    <NavMenu @update:generator="updateGenerator" />
+    <div class="container">
+      <NavMenu @update:generator="updateGenerator" />
+
     <div class="generator">
       <LottoGenerator v-if="currentGenerator === 'lotto'" />
       <EurojackpottGenerator v-if="currentGenerator === 'eurojackpot'" />
       <KenoGenerator v-if="currentGenerator === 'keno'" />
     </div>
+  </div>
   </div>
   </template>
 
@@ -32,7 +35,17 @@ const updateGenerator = (newGenerator: 'lotto' | 'eurojackpot' | 'keno') => {
   color: #2c3e50;
   margin-top: 60px;
 }
+h1 {
+  margin-bottom: 45px;
+}
+.container {
+  display: flex;
+}
+.nav-menu {
+  flex: 1;
+}
 .generator {
+  flex: 3;
   margin-top: 20px;
 }
 </style>

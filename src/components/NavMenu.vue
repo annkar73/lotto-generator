@@ -18,6 +18,8 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 
 <style scoped>
 .nav-menu {
+    display: flex;
+    flex-direction: column;
   margin-bottom: 20px;
 }
 
