@@ -36,5 +36,12 @@ const generateLottoNumbers = () => {
 
 .number-list li {
     display: inline;
+    font-weight: 600;
+}
+button {
+  margin-bottom: 15px;
+  background-color: aquamarine;
+  width:200px;
+  height: 45px;
 }
 </style>
