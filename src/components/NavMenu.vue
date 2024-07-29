@@ -25,5 +25,6 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 
 .nav-menu button {
   margin: 5px;
+  padding: 5px 10px;
 }
 </style>
