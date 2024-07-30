@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { defineEmits } from 'vue'
+import { defineEmits, defineProps } from 'vue'
 
 const emits = defineEmits(['update:generator'])
+const props = defineProps({
+    current: {
+        type: String, 
+        required: true,
+    }
+});
 
 const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
   emits('update:generator', generator)
@@ -11,9 +17,9 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 <template>
   <div class="nav-menu">
     <button @click="() => setGenerator('home')" id="home-btn">Hem</button>
-    <button @click="() => setGenerator('lotto')">Lotto</button>
-    <button @click="() => setGenerator('eurojackpot')">Eurojackpot</button>
-    <button @click="() => setGenerator('keno')">Keno</button>
+    <button :class="{ active: props.current === 'lotto'}" @click="setGenerator('lotto')">Lotto</button>
+    <button :class="{ active: props.current === 'eurojackpot'}" @click="setGenerator('eurojackpot')">Eurojackpot</button>
+    <button :class="{ active: props.current === 'keno'}" @click="setGenerator('keno')">Keno</button>
   </div>
 </template>
 
@@ -42,8 +48,14 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 .nav-menu button:hover {
     background-color: #7b3415;
 }
-#home-btn {
+
+.nav-menu .active {
     background-color: #9c441f;
+
+}
+#home-btn {
+    background-color: #36251b;
+
 }
 #home-btn:hover {
     background-color: #646544;

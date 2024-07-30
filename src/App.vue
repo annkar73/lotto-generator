@@ -21,7 +21,7 @@ const updateGenerator = (newGenerator: 'home' | 'lotto' | 'eurojackpot' | 'keno'
     <h2>för Lotto, Eurojackpot och Keno</h2>
   </div>
     <div class="container">
-      <NavMenu @update:generator="updateGenerator" />
+      <NavMenu :current="currentGenerator" @update:generator="updateGenerator" />
 
     <div class="generator">
       <FirstPage v-if="currentGenerator === 'home'" />
