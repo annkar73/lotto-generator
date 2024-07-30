@@ -4,11 +4,12 @@ import NavMenu from './components/NavMenu.vue';
 import FirstPage from './components/FirstPage.vue';
 import LottoGenerator from './components/LottoGenerator.vue';
 import EurojackpottGenerator from './components/EurojackpotGenerator.vue';
+import VikinglottoGenerator from './components/VikinglottoGenerator.vue';
 import KenoGenerator from './components/KenoGenerator.vue';
 
-const currentGenerator = ref<'home' | 'lotto' | 'eurojackpot' | 'keno'>('home');
+const currentGenerator = ref<'home' | 'lotto' | 'eurojackpot' | 'vikinglotto' | 'keno'>('home');
 
-const updateGenerator = (newGenerator: 'home' | 'lotto' | 'eurojackpot' | 'keno') => {
+const updateGenerator = (newGenerator: 'home' | 'lotto' | 'eurojackpot' | 'vikinglotto' | 'keno') => {
   currentGenerator.value = newGenerator;
 };
 
@@ -18,7 +19,7 @@ const updateGenerator = (newGenerator: 'home' | 'lotto' | 'eurojackpot' | 'keno'
 <div id="app">
   <div class="header">
     <h1>Slumpa spelrader</h1>
-    <h2>för Lotto, Eurojackpot och Keno</h2>
+    <h2>för flera olika spel</h2>
   </div>
     <div class="container">
       <NavMenu :current="currentGenerator" @update:generator="updateGenerator" />
@@ -27,6 +28,7 @@ const updateGenerator = (newGenerator: 'home' | 'lotto' | 'eurojackpot' | 'keno'
       <FirstPage v-if="currentGenerator === 'home'" />
       <LottoGenerator v-if="currentGenerator === 'lotto'" />
       <EurojackpottGenerator v-if="currentGenerator === 'eurojackpot'" />
+      <VikinglottoGenerator v-if="currentGenerator === 'vikinglotto'" />
       <KenoGenerator v-if="currentGenerator === 'keno'" />
     </div>
   </div>

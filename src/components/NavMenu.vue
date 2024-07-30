@@ -9,7 +9,7 @@ const props = defineProps({
     }
 });
 
-const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
+const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'vikinglotto' | 'keno') => {
   emits('update:generator', generator)
 }
 </script>
@@ -19,6 +19,7 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
     <button @click="() => setGenerator('home')" id="home-btn">Hem</button>
     <button :class="{ active: props.current === 'lotto'}" @click="setGenerator('lotto')">Lotto</button>
     <button :class="{ active: props.current === 'eurojackpot'}" @click="setGenerator('eurojackpot')">Eurojackpot</button>
+    <button :class="{ active: props.current === 'vikinglotto'}" @click="setGenerator('vikinglotto')">Vikinglotto</button>
     <button :class="{ active: props.current === 'keno'}" @click="setGenerator('keno')">Keno</button>
   </div>
 </template>
