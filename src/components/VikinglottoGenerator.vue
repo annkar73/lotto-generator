@@ -15,7 +15,6 @@ const generateVikinglottoNumbers = () => {
   vikinglottoSpecial.value = Math.floor(Math.random() * 6) + 1; // Vikinglotto special number between 1 and 6
 };
 
-generateVikinglottoNumbers();
 </script>
 
 <template>
