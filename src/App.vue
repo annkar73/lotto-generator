@@ -54,11 +54,15 @@ html, body {
 .header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: #9c441f;
+  text-align: center;
   width: 100vw;
+  height: 100px;
   margin: 0;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 1000;
 }
 h1, h2 {
   background-color: #9c441f;
@@ -76,14 +80,15 @@ h1 {
   display: flex;
   flex: 1;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .nav-menu {
   width: 200px;
   background-color: #fff3da;
   padding: 15px;
+  overflow: auto;
   align-items: center;
 }
 .generator {
@@ -96,18 +101,17 @@ h1 {
 
 @media (max-width: 468px) {
   .nav-menu {
-    border: none;
     width: 100%;
+    height: auto;
   }
   .container {
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
-    height: calc(100vh - 80px);
+    margin-top: 100px;
+    height: calc(100vh - 100px);
   }
 
   .generator {
-    flex: 1;
     width: 100%;
   }
 }

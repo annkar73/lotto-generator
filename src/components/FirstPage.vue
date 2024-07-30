@@ -3,13 +3,9 @@
 
 <template>
   <div class="info">
-    <p>Här kan du slumpa fram siffror för att använda när du ska spela på Lotto, Eurojackpot eller Keno. 
+    <p><span class="strong">Välj med knapparna</span> vilket spel du vill slumpa en rad till.
     </p>
-    <p><span class="strong">Välj med knapparna</span> vilket spel du vill slumpa till.
-    </p>
-    <p>För Keno kan man själv välja hur många siffror man vill slumpa fram för sitt spel. 
-    </p>
-    <p>Det går <span class="strong">inte</span> att spela på den här sidan, det är bara tänkt för att slumpa fram rader istället för att använda spelsidans inbyggda slumpgenerator. Helt och hållet på skoj. </p>
+    <p>Det går <span class="strong-uppercase">inte</span> att spela på den här sidan, det är bara ett verktyg att använda på skoj. </p>
   </div>
 </template>
 
@@ -28,5 +24,11 @@ p {
 }
 .strong {
     font-weight: bold;
+    
+}
+
+.strong-uppercase {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 </style>

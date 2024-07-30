@@ -18,8 +18,8 @@ const generateKenoNumbers = () => {
   <div>
     <h2>Keno</h2>
     <div class="input-group">
-      <label for="number-of-numbers">Antal nummer:</label>
-      <input for="number of numbers" type="number" v-model="numberOfNumbers" min="1" max="20">
+      <label for="number-of-numbers">Antal nummer (1-11):</label>
+      <input for="number of numbers" type="number" v-model="numberOfNumbers" min="1" max="11">
     </div>
     <button @click="generateKenoNumbers">Slumpa nummer</button>
     <div v-if="kenoNumbers.length">
