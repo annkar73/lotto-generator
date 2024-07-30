@@ -15,7 +15,8 @@ const updateGenerator = (newGenerator: 'lotto' | 'eurojackpot' | 'keno') => {
 
 <template>
 <div id="app">
-    <h1>Lottery Numbers Generators</h1>
+    <h1>Slumpa nummer</h1>
+    <h2>För Lotto, Eurojackpot och Keno</h2>
     <div class="container">
       <NavMenu @update:generator="updateGenerator" />
 
@@ -32,20 +33,55 @@ const updateGenerator = (newGenerator: 'lotto' | 'eurojackpot' | 'keno') => {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff3da;
+  color: #36251b;
+  margin-top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 h1 {
-  margin-bottom: 45px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h2 {
+  margin-bottom: 25px;
 }
 .container {
   display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .nav-menu {
-  flex: 1;
+  width: 200px;
+  background-color: #fff3da;
+  padding: 15px;
+  margin: 1px;
 }
 .generator {
-  flex: 3;
-  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 468px) {
+  .nav-menu {
+    border: none;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .generator {
+    flex: 1;
+    width: 100%;
+  }
 }
 </style>

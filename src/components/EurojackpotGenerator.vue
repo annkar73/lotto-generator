@@ -23,16 +23,16 @@ const generateEurojackpotNumbers = () => {
 
 <template>
   <div>
-    <h2>Eurojackpot Generator</h2>
-    <button @click="generateEurojackpotNumbers">Generate Eurojackpot Numbers</button>
+    <h2>Eurojackpot</h2>
+    <button @click="generateEurojackpotNumbers">Slumpa nummer</button>
     <div v-if="eurojackpotNumbers.length">
-      <h3>Regular Numbers:</h3>
+      <h3>Nummer:</h3>
       <ul class="number-list">
         <li v-for="(number, index) in eurojackpotNumbers" :key="number">
           {{ number }}<span v-if="index < eurojackpotNumbers.length - 1">, </span>
         </li>
       </ul>
-      <h3>Special Numbers:</h3>
+      <h3>Stjärnnummer:</h3>
       <ul class="number-list">
         <li v-for="(number, index) in eurojackpotSpecial" :key="number">
           {{ number }}<span v-if="index < eurojackpotSpecial.length - 1">, </span>
@@ -43,6 +43,14 @@ const generateEurojackpotNumbers = () => {
 </template>
 
 <style scoped>
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h3 {
+  font-weight: bold;
+}
 .number-list {
     display: inline;
     padding: 0;
@@ -55,11 +63,19 @@ const generateEurojackpotNumbers = () => {
 }
 button {
   margin-bottom: 15px;
-  background-color: aquamarine;
-  border-radius: 10px;
-  border: 1px solid aquamarine;
-  box-shadow: 4px 4px rgba(22, 91, 35, 0.558);
+  margin-top: 15px;
+  background-color: #9c441f;
+  color: #fff3da;
+  border: none;
+  border-radius: 5px;
   width:200px;
   height: 45px;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #646544;
 }
 </style>

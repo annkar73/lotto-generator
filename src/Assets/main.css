@@ -1,12 +1,14 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
 }
-
+body {
+  background-color: #fff3da;
+}
 
 @media (hover: hover) {
   a:hover {
@@ -14,10 +16,4 @@
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 
-}

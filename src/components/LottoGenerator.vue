@@ -15,8 +15,8 @@ const generateLottoNumbers = () => {
 
 <template>
   <div>
-    <h2>Lotto Generator</h2>
-    <button @click="generateLottoNumbers">Generate Lotto Numbers</button>
+    <h2>Lotto</h2>
+    <button @click="generateLottoNumbers">Slumpa nummer</button>
     <div v-if="lottoNumbers.length">
       <ul class="number-list">
         <li v-for="(number, index) in lottoNumbers" :key="number">{{ number }}
@@ -28,10 +28,17 @@ const generateLottoNumbers = () => {
 </template>
 
 <style scoped>
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .number-list {
     display: inline;
     padding: 0;
   list-style-type: none;
+  padding: 5px;
+  margin: 15px;
 }
 
 .number-list li {
@@ -40,11 +47,19 @@ const generateLottoNumbers = () => {
 }
 button {
   margin-bottom: 15px;
-  background-color: aquamarine;
-  border-radius: 10px;
-  border: 1px solid aquamarine;
-  box-shadow: 4px 4px rgba(22, 91, 35, 0.558);
+  margin-top: 15px;
+  background-color: #9c441f;
+  color: #fff3da;
+  border: none;
+  border-radius: 5px;
   width:200px;
   height: 45px;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #646544;
 }
 </style>
