@@ -46,7 +46,9 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
   border-radius: 5px;
 }
 .nav-menu button:hover {
-    background-color: #7b3415;
+    background-color: #fff3da;
+    border: 3px solid #9c441f;
+    color: #9c441f;
 }
 
 .nav-menu .active {
@@ -58,7 +60,10 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 
 }
 #home-btn:hover {
-    background-color: #646544;
+   /* background-color: #646544; */
+   background-color: #fff3da;
+    border: 3px solid #36251b;
+    color: #36251b;
 }
 @media (max-width: 768px) {
   .nav-menu {
