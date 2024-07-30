@@ -60,7 +60,6 @@ const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'keno') => {
 
 }
 #home-btn:hover {
-   /* background-color: #646544; */
    background-color: #fff3da;
     border: 3px solid #36251b;
     color: #36251b;
