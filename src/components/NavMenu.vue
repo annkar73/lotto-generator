@@ -9,7 +9,7 @@ const props = defineProps({
     }
 });
 
-const setGenerator = (generator: 'lotto' | 'eurojackpot' | 'vikinglotto' | 'keno') => {
+const setGenerator = (generator: 'home' | 'lotto' | 'eurojackpot' | 'vikinglotto' | 'keno') => {
   emits('update:generator', generator)
 }
 </script>
